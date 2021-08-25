@@ -14,7 +14,7 @@ fetch('https://api.covid19api.com/summary')
             let c = data.Countries;
 
             for (key in c) {
-                if (c[key].Slug == value) {
+                if (c[key].Slug == value.toLowerCase()) {
                     a.push(c[key].TotalConfirmed, c[key].TotalDeaths);
                     console.log(a);
 
